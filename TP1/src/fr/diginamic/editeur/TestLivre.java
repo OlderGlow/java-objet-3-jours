@@ -1,3 +1,5 @@
+package fr.diginamic.editeur;
+
 import java.time.LocalDate;
 import java.time.Month;
 

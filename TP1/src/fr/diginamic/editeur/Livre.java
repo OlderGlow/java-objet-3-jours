@@ -1,3 +1,5 @@
+package fr.diginamic.editeur;
+
 import java.time.LocalDate;
 
 public class Livre {
@@ -41,7 +43,7 @@ public class Livre {
         this.anneeParution = anneeParution;
     }
 
-    public Livre(Livre livre){
+    public Livre(Livre livre) {
         this.titre = livre.titre;
         this.auteur = livre.auteur;
         this.prix = livre.prix;
@@ -100,13 +102,6 @@ public class Livre {
 
     @Override
     public String toString() {
-        return "Livre{" +
-                "titre='" + titre + '\'' +
-                ", auteur='" + auteur + '\'' +
-                ", prix=" + prix +
-                ", nbPages=" + nbPages +
-                ", isbn=" + isbn +
-                ", anneeParution=" + anneeParution +
-                '}';
+        return "fr.diginamic.editeur.Livre{" + "titre='" + titre + '\'' + ", auteur='" + auteur + '\'' + ", prix=" + prix + ", nbPages=" + nbPages + ", isbn=" + isbn + ", anneeParution=" + anneeParution + '}';
     }
 }

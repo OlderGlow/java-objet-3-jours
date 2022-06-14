@@ -1,3 +1,5 @@
+package fr.diginamic.editeur;
+
 public class Client {
     private String nom;
     private String prenom;
@@ -15,7 +17,7 @@ public class Client {
 
     @Override
     public String toString() {
-        return "Client{" +
+        return "fr.diginamic.editeur.Client{" +
                 "nom='" + nom + '\'' +
                 ", prenom='" + prenom + '\'' +
                 ", adresse='" + adresse + '\'' +
