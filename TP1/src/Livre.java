@@ -41,6 +41,15 @@ public class Livre {
         this.anneeParution = anneeParution;
     }
 
+    public Livre(Livre livre){
+        this.titre = livre.titre;
+        this.auteur = livre.auteur;
+        this.prix = livre.prix;
+        this.nbPages = livre.nbPages;
+        this.isbn = livre.isbn;
+        this.anneeParution = livre.anneeParution;
+    }
+
     public String getTitre() {
         return titre;
     }
