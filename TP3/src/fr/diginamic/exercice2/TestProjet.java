@@ -16,7 +16,7 @@ public class TestProjet {
         mission2.ajoutReleve(LocalDate.of(2015, 12, 15), 30);
         mission2.ajoutReleve(LocalDate.of(2015, 12, 16), 18);
         mission2.ajoutReleve(LocalDate.of(2015, 12, 17), 12);
-        List<Mission> tabMissions = new ArrayList<Mission>();
+        List<Mission> tabMissions = new ArrayList<>();
         tabMissions.add(mission);
         tabMissions.add(mission2);
         Projet formationDl = new Projet("Formation DL", LocalDate.of(2015, 5, 12), LocalDate.of(2015, 12, 17), 38000, tabMissions);
