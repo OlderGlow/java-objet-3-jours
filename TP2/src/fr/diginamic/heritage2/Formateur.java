@@ -7,9 +7,9 @@ public class Formateur extends Individu {
     private LocalDate dateDeCreation;
     private static int nombreIntervenant = 0;
 
-    public Formateur(String nom, String prenom, int telephone, int numeroIntervenant, LocalDate dateDeCreation) {
+    public Formateur(String nom, String prenom, int telephone, LocalDate dateDeCreation) {
         super(nom, prenom, telephone);
-        this.numeroIntervenant = numeroIntervenant;
+        setNumeroIntervenant(getNumeroIntervenant() + 1);
         this.dateDeCreation = dateDeCreation;
         setNombreIntervenant(getNombreIntervenant() + 1);
     }
