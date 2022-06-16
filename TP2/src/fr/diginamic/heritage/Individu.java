@@ -1,8 +1,8 @@
 package fr.diginamic.heritage;
 
 public class Individu {
-    private String nom;
-    private String prenom;
+    protected String nom;
+    protected String prenom;
 
     public Individu(String nom, String prenom) {
         this.nom = nom;
