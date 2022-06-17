@@ -7,6 +7,7 @@ public class Triangle extends Forme {
         this.hauteur = hauteur;
     }
 
+    @Override
     public double aire() {
         return (base * hauteur) / 2;
     }
