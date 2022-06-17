@@ -1,21 +1,14 @@
+import java.awt.*;
+
 public class Voiture {
     private final long num_serie;
     private String immatriculation;
     private final String marque;
-    private String couleur;
+    private Color couleur;
     private final int annee;
     private Individu proprietaire;
 
-    public Voiture(long num_serie, String immatriculation, String marque, String couleur, int annee, Individu proprietaire) {
-        this.num_serie = num_serie;
-        this.immatriculation = immatriculation;
-        this.marque = marque;
-        this.couleur = couleur;
-        this.annee = annee;
-        this.proprietaire = proprietaire;
-    }
-
-    public Voiture(long num_serie, String immatriculation, String marque, String couleur, int annee) {
+    public Voiture(long num_serie, String immatriculation, String marque, Color couleur, int annee) {
         this.num_serie = num_serie;
         this.immatriculation = immatriculation;
         this.marque = marque;
@@ -39,11 +32,11 @@ public class Voiture {
         return marque;
     }
 
-    public String getCouleur() {
+    public Color getCouleur() {
         return couleur;
     }
 
-    public void setCouleur(String couleur) {
+    public void setCouleur(Color couleur) {
         this.couleur = couleur;
     }
 
@@ -65,11 +58,12 @@ public class Voiture {
         sb.append("Numéro de série : ").append(num_serie);
         sb.append(", Immatriculation : ").append(immatriculation);
         sb.append(", Marque : ").append(marque);
-        sb.append(", Couleur : ").append(couleur);
+        sb.append(", Couleur : ").append(Couleur.getStringByColor(couleur));
         sb.append(", Année de fabrication : ").append(annee);
         if (proprietaire != null) {
             sb.append(", Propriétaire : ").append(proprietaire.getNom()).append(" ").append(proprietaire.getPrenom());
         }
         return sb.toString();
     }
+
 }

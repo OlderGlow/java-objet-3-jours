@@ -1,6 +1,6 @@
-import java.util.ArrayList;
+import java.awt.*;
+import java.util.*;
 import java.util.List;
-import java.util.Scanner;
 
 public class TestVoiture {
     private static final Scanner sc = new Scanner(System.in);
@@ -82,9 +82,10 @@ public class TestVoiture {
         String marque = sc.nextLine();
         System.out.println("Quelle est la couleur de la voiture ?");
         String couleur = sc.nextLine();
+        Color color = Couleur.getColorByString(couleur);
         System.out.println("En quelle année a été produite la voiture ?");
         int annee = sc.nextInt();
-        voitures.add(new Voiture(numeroSerie, immatriculation, marque, couleur, annee));
+        voitures.add(new Voiture(numeroSerie, immatriculation, marque, color, annee));
     }
 
     public static void supprimerVoiture() throws SupressionVoitureException {
@@ -113,8 +114,9 @@ public class TestVoiture {
                 String immatriculation = sc.nextLine();
                 System.out.println("Quelle est la couleur de la voiture ?");
                 String couleur = sc.nextLine();
+                Color color = Couleur.getColorByString(couleur);
                 voiture.setImmatriculation(immatriculation);
-                voiture.setCouleur(couleur);
+                voiture.setCouleur(color);
                 System.out.println("Voiture modifiée : " + voiture);
             } catch (IndexOutOfBoundsException e) {
                 throw new AucuneVoitureExisteException();
@@ -191,13 +193,11 @@ public class TestVoiture {
                     }
                 }
                 case 4 -> {
-                    System.out.println("Quelle est la couleur de la voiture ?");
-                    sc.nextLine();
-                    String couleur = sc.nextLine();
+                    // Compare list of voiture with color and sort by brightness
+                    voitures.sort(Comparator.comparingInt(v -> Couleur.getBrightness(v.getCouleur())));
+                    Collections.reverse(voitures);
                     for (Voiture voiture : voitures) {
-                        if (voiture.getCouleur().equals(couleur)) {
-                            System.out.println("Voiture n°" + (voitures.indexOf(voiture) + 1) + " : " + voiture);
-                        }
+                        System.out.println("Voiture n°" + (voitures.indexOf(voiture) + 1) + " : " + voiture);
                     }
                 }
                 case 5 -> {
