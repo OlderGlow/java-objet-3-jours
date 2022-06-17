@@ -16,6 +16,6 @@ public class Cercle extends Forme {
 
     @Override
     public String toString() {
-        return super.toString() + "Cercle de rayon " + rayon + " : aire = " + aire() + " et perimetre = " + perimetre();
+        return super.toString() + "Cercle de rayon " + rayon;
     }
 }

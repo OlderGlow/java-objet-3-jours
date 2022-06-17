@@ -18,6 +18,6 @@ public class Losange extends Forme {
 
     @Override
     public String toString() {
-        return super.toString() + "Losange de base " + base + " et hauteur " + hauteur + " : aire = " + aire() + " et perimetre = " + perimetre();
+        return super.toString() + "Losange de base " + base + " et hauteur " + hauteur;
     }
 }

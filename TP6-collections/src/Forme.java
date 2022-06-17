@@ -12,6 +12,10 @@ public abstract class Forme {
         formes.add(forme);
     }
 
+    public String getNom() {
+        return this.getClass().getSimpleName();
+    }
+
     abstract double aire();
     abstract double perimetre();
 

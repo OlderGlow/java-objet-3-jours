@@ -16,6 +16,6 @@ public class Carre extends Forme {
 
     @Override
     public String toString() {
-        return super.toString() + "Carre de cote " + cote + " : aire = " + aire() + " et perimetre = " + perimetre();
+        return super.toString() + "Carre de cote " + cote;
     }
 }

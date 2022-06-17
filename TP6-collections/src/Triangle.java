@@ -1,27 +1,23 @@
 public class Triangle extends Forme {
-    private double a;
-    private double b;
-    private double c;
+    private double base;
+    private double hauteur;
 
-    public Triangle(double a, double b, double c) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
+    public Triangle(double base, double hauteur) {
+        this.base = base;
+        this.hauteur = hauteur;
     }
 
-    @Override
     public double aire() {
-        double p = (a + b + c) / 2;
-        return Math.sqrt(p * (p - a) * (p - b) * (p - c));
+        return (base * hauteur) / 2;
     }
 
     @Override
     double perimetre() {
-        return a + b + c;
+        return base + hauteur + Math.sqrt(base * base + hauteur * hauteur);
     }
 
     @Override
     public String toString() {
-        return super.toString() + "Triangle de cotes " + a + ", " + b + " et " + c + " : aire = " + aire() + " et perimetre = " + perimetre();
+        return super.toString() + "Triangle de base " + base + " et hauteur " + hauteur;
     }
 }

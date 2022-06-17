@@ -10,13 +10,11 @@ public class TestFormes {
             String forme = sc.nextLine();
             switch (forme) {
                 case "triangle" -> {
-                    System.out.println("Entrez le premier côté :");
-                    double a = sc.nextDouble();
-                    System.out.println("Entrez le deuxième côté :");
-                    double b = sc.nextDouble();
-                    System.out.println("Entrez le troisième côté :");
-                    double c = sc.nextDouble();
-                    Triangle triangle = new Triangle(a, b, c);
+                    System.out.println("Entrez la base du triangle :");
+                    double base = sc.nextDouble();
+                    System.out.println("Entrez la hauteur du triangle :");
+                    double hauteur = sc.nextDouble();
+                    Triangle triangle = new Triangle(base, hauteur);
                     Forme.addForme(triangle);
                 }
                 case "carre" -> {
@@ -62,6 +60,31 @@ public class TestFormes {
         System.out.println("Voici les formes que vous avez créées :");
         for (Forme forme : Forme.getFormes()) {
             System.out.println(forme);
+        }
+        System.out.println("Souhaitez-vous voir leur aire (1) ou leur perimetre (2) ou les deux (3) ?");
+        int choix = sc.nextInt();
+        switch (choix) {
+            case 1 -> {
+                System.out.println("Voici les aires des formes que vous avez créées :");
+                for (Forme forme : Forme.getFormes()) {
+                    System.out.println(forme.getNom() + " : aire " + forme.aire());
+                }
+            }
+            case 2 -> {
+                System.out.println("Voici les perimetres des formes que vous avez créées :");
+                for (Forme forme : Forme.getFormes()) {
+                    System.out.println(forme.getNom() + " : perimetre " + forme.perimetre());
+                }
+            }
+            case 3 -> {
+                System.out.println("Voici les aires et périmètres des formes que vous avez créées :");
+                for (Forme forme : Forme.getFormes()) {
+                    System.out.println(forme.getNom() + " : aire " + forme.aire() + " et perimetre " + forme.perimetre());
+                }
+            }
+            default -> {
+                System.err.println("Choix inconnu");
+            }
         }
     }
 }

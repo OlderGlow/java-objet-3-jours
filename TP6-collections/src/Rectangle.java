@@ -18,6 +18,6 @@ public class Rectangle extends Forme {
 
     @Override
     public String toString() {
-        return super.toString() + "Rectangle de largeur " + largeur + " et hauteur " + hauteur + " : aire = " + aire() + " et perimetre = " + perimetre();
+        return super.toString() + "Rectangle de largeur " + largeur + " et hauteur " + hauteur;
     }
 }
